@@ -107,6 +107,19 @@ sudo chmod +x /usr/local/bin/common.sh
 
 # 🖥 2) Install on MASTER Node
 
+
+#### update repos & install conntrack
+```bash
+sudo apt update
+sudo apt install -y conntrack
+```
+
+#### verify
+```bash
+which conntrack || echo "conntrack not found"
+conntrack -V || true
+```
+
 ### Detect Master IP
 
 ```bash
@@ -250,7 +263,7 @@ GitHub Actions (release.yml) will auto‑generate a release.
 
 ---
 
-## [1.0.0] - YYYY-MM-DD
+## [1.0.0] - 2025-11-16
 ### Added
 - Initial release of k8s-installer.
 ```
